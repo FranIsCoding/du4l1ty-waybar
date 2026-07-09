@@ -22,6 +22,11 @@ window.left-bar#waybar {
     padding: 0 10px;
 }
 
+#custom-dualitybox {
+  padding: 10px 10px 4px 10px;
+  background: linear-gradient(45deg, white 50%, black 50%);
+}
+
 #custom-powerbutton {
   font-size: 20px;
   margin: 10px 10px 10px 10px;
