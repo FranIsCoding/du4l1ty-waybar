@@ -1,0 +1,23 @@
+.top-bar {
+    font-family: "DepartureMono Nerd Font";
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.left-bar {
+    font-family: "DepartureMono Nerd Font";
+    font-size: 15px;
+    color: #000000;
+}
+
+window.top-bar#waybar {
+  background-color: #000000;
+}
+
+window.left-bar#waybar {
+  background-color: #ffffff;
+}
+
+#clock {
+    padding: 0 10px;
+}
