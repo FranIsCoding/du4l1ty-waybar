@@ -3,12 +3,12 @@
     "name" : "left-bar",
     "layer": "top",
     "position": "left",
-    "modules-right": ["clock"],
+    "modules-right": ["custom/powerbutton"],
 
-    "clock": {
-        "format" : "{:%H}",
-        "format-alt" : "{:%a, %d. %b  %H:%M}",
-        "tooltip" : false
+    "custom/powerbutton": {
+        "format" : "",
+        "tooltip-format" : "Shut Down",
+        "on-click": "systemctl poweroff",
     }
   },
   {
