@@ -4,12 +4,31 @@
     "layer": "top",
     "width" : 35,
     "position": "left",
-    "modules-left" : ["custom/dualitybox"],
+    "modules-left" : ["custom/dualitybox", "custom/player-prev", "custom/player-toggle", "custom/player-next"],
     "modules-right": ["custom/powerbutton"],
 
     "custom/dualitybox" : {
       "format" : " ",
       "tooltip" : false
+    },
+
+    "custom/player-prev" : {
+      "format": "󰒮",
+      "on-click": "playerctl previous",
+      "tooltip": false
+    },
+
+    "custom/player-toggle" : {
+      "exec": "./playtoggle.sh",
+      "format": "{}",
+      "on-click": "playerctl play-pause",
+      "tooltip": false
+    },
+
+    "custom/player-next" : {
+      "format": "󰒭",
+      "on-click": "playerctl next",
+      "tooltip": false
     },
 
     "custom/powerbutton": {
@@ -28,8 +47,6 @@
 
     "mpris": {
         "format" : " {player_icon} {artist} - {title}",
-        "format-paused" : " ⏸  {artist} - {title}",
-        "format-stopped" : "󰎆 Nothing to Show",
         "player-icons": {
         "default": "󰎆",
         "spotify": "",
