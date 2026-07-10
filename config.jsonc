@@ -2,6 +2,7 @@
   {
     "name" : "left-bar",
     "layer": "top",
+    "width" : 35,
     "position": "left",
     "modules-left" : ["custom/dualitybox"],
     "modules-right": ["custom/powerbutton"],
@@ -20,9 +21,32 @@
   {
     "name" : "top-bar",
     "layer": "top",
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
+    "height" : 35,
+    "modules-left": ["mpris","custom/userandhost"],
+    "modules-center": ["sway/workspaces", "sway/mode"],
     "modules-right": ["clock"],
+
+    "mpris": {
+        "format" : " {player_icon} {artist} - {title}",
+        "format-paused" : " ⏸  {artist} - {title}",
+        "format-stopped" : "󰎆 Nothing to Show",
+        "player-icons": {
+        "default": "󰎆",
+        "spotify": "",
+        "youtube": "",
+        "vlc": "󰕼",
+        "firefox": "󰈹",
+        "chromium": ""
+      },
+        "max-length" : 30
+    },
+
+    "custom/userandhost": {
+      "exec" : "echo \"$USER@$HOSTNAME\"",
+      "format" : "{}",
+      "invertal" : -1,
+      "tooltip" : false
+    },
 
     "clock": {
         "format" : "{:%H:%M}",
