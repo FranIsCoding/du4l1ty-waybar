@@ -4,22 +4,57 @@
     color: #ffffff;
 }
 
+window.top-bar#waybar {
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+#mpris {
+    background: black;
+    padding: 0 35px 0 10px;
+}
+
+#custom-userandhost {
+  padding: 0px 50px 0px 10px;
+  background: linear-gradient(45deg, black 80%, transparent 80%);
+}
+
+#workspaces {
+  background: transparent;
+}
+
+#workspaces button {
+    background-color: #000000;
+    color: #ffffff;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 50%;
+    padding: 0;
+    margin: 4px;
+}
+
+#workspaces button.focused {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#workspaces button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#clock {
+    background: linear-gradient(45deg, transparent 24px, black 24px);
+    padding: 0 15px 0 35px;
+}
+
 .left-bar {
     font-family: "DepartureMono Nerd Font";
     font-size: 15px;
     color: #000000;
 }
 
-window.top-bar#waybar {
-  background-color: #000000;
-}
-
 window.left-bar#waybar {
   background-color: #ffffff;
-}
-
-#clock {
-    padding: 0 10px;
 }
 
 #custom-dualitybox {
