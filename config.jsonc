@@ -29,7 +29,7 @@
     },
 
     "custom/player-toggle" : {
-      "exec": "./playtoggle.sh",
+      "exec": "~/.config/waybar/waybar_player_toggle.sh",
       "format": "{}",
       "on-click": "playerctl play-pause",
       "tooltip": false
