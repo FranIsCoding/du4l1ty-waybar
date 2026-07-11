@@ -82,6 +82,33 @@ window.left-bar#waybar {
     font-size: 30px;
 }
 
+#launchers {
+    background: transparent;
+    padding: 10px 0px;
+}
+
+#custom-apps-launcher,
+#custom-terminal-launcher,
+#custom-browser-launcher,
+#custom-files-launcher {
+    background-color: #ffffff;
+    color: #000000;
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 10px 0px 10px;
+    font-size: 15px;
+}
+
+#custom-apps-launcher:hover,
+#custom-terminal-launcher:hover,
+#custom-browser-launcher:hover,
+#custom-files-launcher:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 #session-buttons {
   background-color: #ffffff;
   font-size: 25px;

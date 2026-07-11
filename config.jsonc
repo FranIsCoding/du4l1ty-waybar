@@ -5,6 +5,7 @@
     "width" : 35,
     "position": "left",
     "modules-left" : ["custom/dualitybox", "group/media-controls"],
+    "modules-center" : ["group/launchers"],
     "modules-right": ["group/session-buttons"],
 
     "custom/dualitybox" : {
@@ -50,6 +51,44 @@
       "scroll-step": 5,
       "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
       "tooltip": false
+    },
+
+    "group/launchers" : {
+      "orientation": "vertical",
+      "modules": [
+        "custom/terminal-launcher",
+        "custom/browser-launcher",
+        "custom/files-launcher",
+        "custom/apps-launcher"
+      ]
+    },
+
+    "custom/terminal-launcher" : {
+      "format": "",
+      "tooltip-format": "Open Terminal",
+      "on-click": "ghostty",
+      "justify": "center"
+    },
+
+    "custom/browser-launcher" : {
+      "format": "󰈹",
+      "tooltip-format": "Open Firefox",
+      "on-click": "firefox",
+      "justify": "center"
+    },
+
+    "custom/files-launcher" : {
+      "format": "󰝰",
+      "tooltip-format": "Open File Explorer",
+      "on-click": "",
+      "justify": "center"
+    },
+
+    "custom/apps-launcher" : {
+      "format": "󰀻",
+      "tooltip-format": "Open app Launcher",
+      "on-click": "wofi --show drun",
+      "justify": "center"
     },
 
     "group/session-buttons": {
