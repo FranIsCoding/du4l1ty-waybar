@@ -4,12 +4,22 @@
     "layer": "top",
     "width" : 35,
     "position": "left",
-    "modules-left" : ["custom/dualitybox", "custom/player-prev", "custom/player-toggle", "custom/player-next"],
+    "modules-left" : ["custom/dualitybox", "group/media-controls"],
     "modules-right": ["custom/powerbutton"],
 
     "custom/dualitybox" : {
       "format" : " ",
       "tooltip" : false
+    },
+
+    "group/media-controls": {
+      "orientation": "vertical",
+      "modules": [
+        "custom/player-prev",
+        "custom/player-toggle",
+        "custom/player-next",
+        "pulseaudio"
+      ]
     },
 
     "custom/player-prev" : {
@@ -31,12 +41,24 @@
       "tooltip": false
     },
 
+    "pulseaudio": {
+      "format": "{icon}\n<span size='55%'>{volume}%</span>",
+      "format-muted": "󰝟\n<span size='55%'>0%</span>",
+      "format-icons": {
+        "default": ["󰕿", "󰖀", "󰕾"]
+        },
+      "scroll-step": 5,
+      "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+      "tooltip": false
+    },
+
     "custom/powerbutton": {
         "format" : "",
         "tooltip-format" : "Shut Down",
         "on-click": "systemctl poweroff"
     }
   },
+
   {
     "name" : "top-bar",
     "layer": "top",
