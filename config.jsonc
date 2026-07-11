@@ -5,7 +5,7 @@
     "width" : 35,
     "position": "left",
     "modules-left" : ["custom/dualitybox", "group/media-controls"],
-    "modules-right": ["custom/powerbutton"],
+    "modules-right": ["group/session-buttons"],
 
     "custom/dualitybox" : {
       "format" : " ",
@@ -29,7 +29,7 @@
     },
 
     "custom/player-toggle" : {
-      "exec": "~/.config/waybar/waybar_player_toggle.sh",
+      "exec": "~/.config/waybar/playtoggle.sh",
       "format": "{}",
       "on-click": "playerctl play-pause",
       "tooltip": false
@@ -52,10 +52,31 @@
       "tooltip": false
     },
 
+    "group/session-buttons": {
+      "orientation": "vertical",
+      "modules": [
+        "custom/lockbutton",
+        "custom/rebootbutton",
+        "custom/powerbutton"
+      ]
+    },
+
+    "custom/lockbutton": {
+      "format": "󰌾",
+      "tooltip-format": "Lock Screen",
+      "on-click": "swaylock -f -c 000000 || hyprlock" 
+    },
+
+    "custom/rebootbutton": {
+      "format": "",
+      "tooltip-format": "Reboot",
+      "on-click": "systemctl reboot"
+    },
+
     "custom/powerbutton": {
-        "format" : "",
-        "tooltip-format" : "Shut Down",
-        "on-click": "systemctl poweroff"
+      "format" : "",
+      "tooltip-format" : "Shut Down",
+      "on-click": "systemctl poweroff"
     }
   },
 

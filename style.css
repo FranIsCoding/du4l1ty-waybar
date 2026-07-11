@@ -82,8 +82,15 @@ window.left-bar#waybar {
     font-size: 30px;
 }
 
+#session-buttons {
+  background-color: #ffffff;
+  font-size: 25px;
+  padding: 50px 0px 0px 0px;
+  background: linear-gradient(45deg, white 75%, transparent 75%);
+}
+
+#custom-lockbutton,
+#custom-rebootbutton,
 #custom-powerbutton {
-  font-size: 20px;
-  padding: 100px 10px 10px 10px;
-  background: linear-gradient(45deg, white 50%, transparent 50%);
+  padding: 5px 0px 5px 0px;
 }
